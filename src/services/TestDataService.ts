@@ -1,4 +1,4 @@
-import http from "@/http-common";
+import http from "@/api/itemApi";
 
 /* eslint-disable */
 class TestDataService {

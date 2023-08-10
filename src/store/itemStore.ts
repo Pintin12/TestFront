@@ -1,7 +1,7 @@
 
-import getAllItems from "@/helpers/items/getItems";
 import { Item } from "@/intefaces/Items";
 import { defineStore } from "pinia";
+
 
 interface ItemState{
     itemArr: Array<Item>
@@ -12,8 +12,8 @@ state:(): ItemState => ({
     itemArr: []
 }),
 actions:{
-    loadItems(){
-       this.itemArr = getAllItems();
+    loadItems(it: Array<Item>){
+       this.itemArr.push(... it);
     },
 
 }
