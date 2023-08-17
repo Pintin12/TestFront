@@ -9,13 +9,13 @@ export const useItem = () => {
     const {itemArr} = storeToRefs(itStore); 
 
     const initItems = async () => {
+        itStore.cleanItems();
         TestDataService.getAll()
-        .then((response: ResponseData) => {
-            itStore.loadItems(response.data.result.data) ;
-              
+        .then((response) => {
+           itStore.loadItems(response.data) ;
         })
         .catch((e: Error) => {
-            console.log(e);
+            console.log("Error", e);
             return null;
         });
 

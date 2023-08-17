@@ -15,6 +15,9 @@ actions:{
     loadItems(it: Array<Item>){
        this.itemArr.push(... it);
     },
-
+    cleanItems()  {
+        this.itemArr = [];
+     },
 }
+
 });

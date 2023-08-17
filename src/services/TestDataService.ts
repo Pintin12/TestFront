@@ -14,8 +14,8 @@ class TestDataService {
     return http.delete(`/${id}`);
   }
 
-  update(data: any): Promise<any> {
-    return http.put(`/UpdateItem`, data);
+  update(id:any, data: any): Promise<any> {
+    return http.put(`/UpdateItem/${id}`, data);
   }  
 }
 
